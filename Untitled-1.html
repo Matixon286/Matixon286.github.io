@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Podcast Informatyczny</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #ffffff;
+    }
+    h2 {
+        color:#004080;
+    }
+    .episode {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 15px;
+    }
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      color: #888;
+      padding: 10px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Podcast TAiSI</h1>
+  </header>
+
+  <div class="container">
+    <h2>Odcinki</h2>
+
+    <div class="episode">
+      <p>Tytuł projektu: Z życia informatyka</p>
+      <p>Temat: Jak NIE wygląda praca w IT – obalamy mity</p>
+      <p>Głosu użyczyli: Kuba Dębowski oraz Maciej Więckowski</p>
+      <audio controls>
+        <source src="podcast.mp3" type="audio/mpeg" />
+        Twoja przeglądarka nie obsługuje odtwarzacza audio.
+      </audio>
+      <p>Skrypt przygotowany przez Mateusza Nowakowskiego oraz kolege G.P. Trela</p>
+      <p>Montaż wykonany przez Mateusza Nowakowskiego w programie Audacity</p>
+      <p>Strona internetowa wykonana przez Mateusza Nowakowskiego oraz kolege G.P. Trela</p>
+      <p>Użyte efekty i techniki edycji: Normalizacja; Podgłaśnianie/Ściszanie; Dzielenie klipu</p>
+      <p>Czas trwania: 4:21</p>
+      <p>Format pliku: .mp3</p>
+      <p>Częstotliwość próbkowania: 44100 Hz</p>
+      <p>Liczba kanałów: 2</p>
+    </div>
+
+    <div class="episode">
+        <figure>
+            <img src="audacity.png" alt="Proces montażu" style="width: 750px;">
+            <figcaption>Proces montażu w programie Audacity</figcaption>
+        </figure>
+    </div>
+    <!-- Możesz dodać kolejne odcinki według powyższego schematu -->
+
+  </div>
+
+  <footer>
+    &copy; 2025 Mateusz Nowakowski 2Tg2. Wszelkie prawa zastrzeżone.
+  </footer>
+</body>
+</html>
