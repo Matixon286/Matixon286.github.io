@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie egzaminacyjne 1</title>
+    <script>
+        function liczZnaki() {
+            const tekst = document.getElementById('wiadomosc').value;
+            document.getElementById('licznik').innerHTML = tekst.length;
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Powrót do strony głównej</a>
+    <h3>Wpisz tekst:</h3>
+    <textarea id="wiadomosc" oninput="liczZnaki()" rows="5" cols="40"></textarea>
+    <p>Liczba znaków: <span id="licznik">0</span></p>
+</body>
+</html>

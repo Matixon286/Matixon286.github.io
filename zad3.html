@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 3</title>
+    <script>
+        function obliczDni() {
+            const rok = parseInt(document.getElementById('rok').value);
+            const miesiac = parseInt(document.getElementById('miesiac').value);
+            const dzien = parseInt(document.getElementById('dzien').value);
+            
+            const teraz = new Date();
+            const obecnyRok = teraz.getFullYear();
+            const obecnyMiesiac = teraz.getMonth() + 1;
+            const obecnyDzien = teraz.getDate();
+
+            // Uproszczone obliczenie (rok = 365 dni, miesiąc = 30 dni)
+            const sumaDniUrodzenia = (rok * 365) + (miesiac * 30) + dzien;
+            const sumaDniTeraz = (obecnyRok * 365) + (obecnyMiesiac * 30) + obecnyDzien;
+            
+            const wynik = sumaDniTeraz - sumaDniUrodzenia;
+            document.getElementById('wynik_dni').innerHTML = "Żyjesz już około " + wynik + " dni.";
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Powrót do strony głównej</a>
+    <h3>Oblicz ile dni żyjesz</h3>
+    Rok urodzenia: <input type="number" id="rok"><br>
+    Miesiąc urodzenia: <input type="number" id="miesiac"><br>
+    Dzień urodzenia: <input type="number" id="dzien"><br><br>
+    <button onclick="obliczDni()">Oblicz</button>
+
+    <p id="wynik_dni"></p>
+</body>
+</html>

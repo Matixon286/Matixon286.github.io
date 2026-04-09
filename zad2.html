@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 2</title>
+    <script>
+        function wyswietlDane() {
+            const dane = document.getElementById('nazwisko_imie').value;
+            const wiek = document.getElementById('wiek').value;
+            const output = "Uczeń: " + dane + ", Wiek: " + wiek + " lat";
+            document.getElementById('wynik').innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Powrót do strony głównej</a><br><br>
+
+    <h3>Formularz ucznia</h3>
+    Nazwisko i imię: <input type="text" id="nazwisko_imie"><br><br>
+    Wiek: <input type="number" id="wiek"><br><br>
+    <button onclick="wyswietlDane()">Wykonaj</button>
+
+    <div id="wynik"></div>
+</body>
+</html>

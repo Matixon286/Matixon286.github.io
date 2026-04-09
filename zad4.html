@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 4</title>
+    <script>
+        function sprawdz() {
+            const pola = ["imie", "nazwisko", "email"];
+            pola.forEach(id => {
+                if (document.getElementById(id).value === "") {
+                    alert("Pole " + id + " jest puste!");
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Powrót do strony głównej</a>
+    <h3>Rejestracja</h3>
+    Imię: <input type="text" id="imie"><br>
+    Nazwisko: <input type="text" id="nazwisko"><br>
+    E-mail: <input type="email" id="email"><br><br>
+    <button onclick="sprawdz()">Oblicz (Sprawdź)</button>
+</body>
+</html>

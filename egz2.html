@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie egzaminacyjne 2</title>
+    <script>
+        function oblicz(operacja) {
+            const a = parseFloat(document.getElementById('l1').value);
+            const b = parseFloat(document.getElementById('l2').value);
+            let wynik = 0;
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Wpisz obie liczby!");
+                return;
+            }
+
+            switch(operacja) {
+                case '+': wynik = a + b; break;
+                case '-': wynik = a - b; break;
+                case '*': wynik = a * b; break;
+                case '/': 
+                    wynik = (b !== 0) ? (a / b) : "Nie dziel przez 0!";
+                    break;
+            }
+            document.getElementById('wynik_kalk').innerHTML = wynik;
+        }
+
+        function czysc() {
+            document.getElementById('l1').value = "";
+            document.getElementById('l2').value = "";
+            document.getElementById('wynik_kalk').innerHTML = "---";
+        }
+    </script>
+</head>
+<body>
+    <a href="index.html">Powrót do strony głównej</a>
+    <h3>Prosty Kalkulator</h3>
+    Liczba 1: <input type="number" id="l1"><br>
+    Liczba 2: <input type="number" id="l2"><br><br>
+    
+    <button onclick="oblicz('+')">+</button>
+    <button onclick="oblicz('-')">-</button>
+    <button onclick="oblicz('*')">*</button>
+    <button onclick="oblicz('/')">/</button>
+    <button onclick="czysc()">CZYŚĆ</button>
+
+    <h4>Wynik: <span id="wynik_kalk">---</span></h4>
+</body>
+</html>
